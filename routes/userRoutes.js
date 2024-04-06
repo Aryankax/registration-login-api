@@ -8,4 +8,8 @@ router.post('/login', registration.login);
 
 router.get('/getUserData', registration.getUserData);
 
+router.post('/login/colleague', registration.colleagueLogin)
+
+router.post('/signup/colleague', registration.colleagueSignup)
+
 module.exports = router;
