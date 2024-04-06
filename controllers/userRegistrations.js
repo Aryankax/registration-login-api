@@ -100,7 +100,7 @@ const login = async(req,res)=>{
 
         if(!isPasswordValid){
             return res.status(200).json({
-                error: 'Inavlid credentials',
+                message: 'Inavlid credentials',
                 code: '401'
             });
         }
@@ -141,7 +141,7 @@ const colleagueLogin = async(req,res)=>{
 
         if(!isPasswordValid){
             return res.status(401).json({
-                error: 'Inavlid credentials',
+                message: 'Inavlid credentials',
                 code: '401'
             });
         }
