@@ -46,6 +46,8 @@ const login = async(req,res)=>{
         //Find user by email
         const user = await userRegistration.findOne({email});
 
+        const userId = user._id;
+
         if(!user){
             return res.status(401).json({error: 'Inavalid crediantials'});
         }
@@ -60,7 +62,8 @@ const login = async(req,res)=>{
         }
 
         res.status(200).json({
-            message: 'User logged in successfully'
+            message: 'User logged in successfully',
+            userId: userId
         });
 
     } catch(error){

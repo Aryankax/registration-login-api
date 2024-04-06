@@ -16,8 +16,8 @@ app.use('/', registrationRoutes);
 
 mongoose.connect(process.env.MONGO_URL).then(()=>{
     //listen for requests
-    app.listen(4000, ()=>{
-        console.log(`API started on port ${4000}`);
+    app.listen(5000, ()=>{
+        console.log(`API started on port ${5000}`);
     })
 }).catch((error)=> {
     console.log(error);
