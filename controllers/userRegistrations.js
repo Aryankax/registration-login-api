@@ -57,19 +57,22 @@ const login = async(req,res)=>{
 
         if(!isPasswordValid){
             return res.status(401).json({
-                error: 'Inavlid credentials'
+                error: 'Inavlid credentials',
+                code: '401'
             });
         }
 
         res.status(200).json({
             message: 'User logged in successfully',
-            userId: userId
+            userId: userId,
+            code: '200'
         });
 
     } catch(error){
         console.log('Error during login', error);
         res.status(500).json({
-            message: 'Internal server Error'
+            message: 'Internal server Error',
+            code: '500'
         });
     }
 }
@@ -91,7 +94,8 @@ const getUserData = async(req,res)=>{
     res.status(200).json({
         First_Name: firstName,
         Last_Name: lastName,
-        Email: email
+        Email: email,
+        code: '200'
     });
     } catch(error){
         console.log(error);
