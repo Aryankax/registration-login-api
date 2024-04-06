@@ -108,6 +108,9 @@ const login = async(req,res)=>{
         res.status(200).json({
             message: 'User logged in successfully',
             userId: userId,
+            firstName: user.First_Name,
+            lastName: user.Last_Name,
+            email: user.email,
             code: '200'
         });
 
@@ -146,6 +149,9 @@ const colleagueLogin = async(req,res)=>{
         res.status(200).json({
             message: 'Colleague logged in successfully',
             userId: colleagueID,
+            firstName: colleague.First_Name,
+            lastName: colleague.Last_Name,
+            email: email,
             code: '200'
         });
 
