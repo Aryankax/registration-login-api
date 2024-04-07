@@ -2,7 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const app = express();
 const mongoose = require('mongoose');
-const registrationRoutes = require('../registration-login-api/routes/userRoutes');
+const registrationRoutes = require('./routes/userRoutes');
 
 app.use((req,res, next)=>{
     console.log(req.path, req.method);
